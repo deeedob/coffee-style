@@ -1,0 +1,17 @@
+[Catpuccin]
+# Base UI Elements
+background      = "#1e1e2e"
+area1           = "#181825"
+area2           = "#11111B"
+highlighted     = "#45475A"
+
+# Text related
+text            = "#cdd6f4"
+disabledText    = "#363659"
+
+# Element related
+icon            = "#6c7086"
+indicator       = "#ffcc66"
+panelIndicator  = "#CBA6F7"
+active          = "#1e1e2e"
+inactive        = "#6c7086"
