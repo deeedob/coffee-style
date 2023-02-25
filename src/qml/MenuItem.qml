@@ -29,8 +29,14 @@ T.MenuItem {
             anchors.leftMargin: 5
             width: 3
             height: parent.height
-            visible: control.highlighted
+            opacity: control.highlighted ? 1.0 : 0.0
             color: CoffeeStyle.panelIndicator
+
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: 150
+                }
+            }
         }
     }
 

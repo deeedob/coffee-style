@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.16)
 
-qt_add_executable(test1
+qt_add_executable(testBasic
     testBasics.cpp
 )
 
-target_link_libraries(test1 PRIVATE
+target_link_libraries(testBasic PRIVATE
     Qt6::Core
     Qt6::Gui
     Qt6::Quick
@@ -12,11 +12,13 @@ target_link_libraries(test1 PRIVATE
     coffeestyle
 )
 
-qt_add_qml_module(test1
+qt_add_qml_module(testBasic
     URI Tests
     QML_FILES
     TestBasics.qml
+    RESOURCE_PREFIX "/"
     NO_RESOURCE_TARGET_PATH
-    AUTO_RESOURCE_PREFIX
+    RESOURCES
+        globe.svg
 )
 

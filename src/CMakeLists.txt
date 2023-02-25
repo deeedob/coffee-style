@@ -1,16 +1,18 @@
-cmake_minimum_required(VERSION 3.16)
-
-project(CoffeeStyle VERSION 1.0 LANGUAGES CXX)
+file(REAL_PATH "../qml/Coffee/Style" QML_OUTPUT_DIR BASE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 qt_policy(SET QTP0001 NEW)
 
 set(QML_FILES
     "qml/ApplicationWindow.qml"
     "qml/MenuBar.qml"
+    "qml/MenuBarItem.qml"
     "qml/Menu.qml"
     "qml/MenuItem.qml"
+    "qml/Sidebar.qml"
+    "qml/SidebarEntry.qml"
+    "qml/Icon.qml"
+    "qml/CheckableButtonGroup.qml"
     "qml/WindowDragHandler.qml"
-    "qml/MenuBarItem.qml"
 )
 
 # Add schemes and font resources
@@ -34,7 +36,8 @@ set(ALL_RESOURCES ${COLOR_SCHEMES_REL} ${FONTS_REL})
 
 qt_add_qml_module(coffeestyle
     URI "Coffee.Style"
-    OUTPUT_DIRECTORY "Coffee/Style"
+    VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}"
+    OUTPUT_DIRECTORY ${QML_OUTPUT_DIR}
     AUTO_RESOURCE_PREFIX
     CLASS_NAME CoffeeStyle
     IMPORTS

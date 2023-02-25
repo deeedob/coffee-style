@@ -1,9 +1,14 @@
 cmake_minimum_required(VERSION 3.16)
-project(PyQt6 VERSION 1.0 LANGUAGES CXX)
+
+project(CoffeeStyle VERSION 1.0 LANGUAGES CXX)
+
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Quick QuickControls2)
 qt_standard_project_setup()
+
+list(APPEND QML_IMPORT_PATHS "${CMAKE_CURRENT_BINARY_DIR}/qml")
+set(QML_IMPORT_PATH "${QML_IMPORT_PATHS}" CACHE STRING "Qt Creator QML import paths")
 
 find_package(toml11)
 if (NOT toml11_FOUND)

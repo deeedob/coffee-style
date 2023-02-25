@@ -1,4 +1,5 @@
 import Coffee.Style
+import QtQuick.Layouts
 
 ApplicationWindow {
     id: root
@@ -39,7 +40,41 @@ ApplicationWindow {
         }
 
         Menu {
-            title: "A"
+            title: "0xCAFE"
+        }
+    }
+
+    RowLayout {
+        anchors.fill: parent
+        Sidebar {
+            id: leftSidebar
+            Layout.fillHeight: true
+            Layout.preferredWidth: 50
+            rootWindow: root
+            topItems: [
+                SidebarEntry {
+                    checked: true
+                    icon.source: "qrc:/globe.svg"
+                },
+                SidebarEntry {
+                    icon.source: "qrc:/globe.svg"
+                },
+                SidebarEntry {
+                    checked: true
+                    icon.source: "qrc:/globe.svg"
+                },
+                SidebarEntry {
+                    icon.source: "qrc:/globe.svg"
+                }
+            ]
+            bottomItems: [
+                SidebarEntry {
+                    icon.source: "qrc:/globe.svg"
+                },
+                SidebarEntry {
+                    icon.source: "qrc:/globe.svg"
+                }
+            ]
         }
     }
 }
