@@ -18,12 +18,15 @@ class COFFEESTYLE_EXPORT CoffeeStyle : public QQuickAttachedPropertyPropagator
 
     Q_PROPERTY(QColor text READ text NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor disabledText READ disabledText NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor highlightedText READ highlightedText NOTIFY themeChanged FINAL)
 
     Q_PROPERTY(QColor icon READ icon NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor indicator READ indicator NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor panelIndicator READ panelIndicator NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor handleIndicator READ handleIndicator NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor active READ active NOTIFY themeChanged FINAL)
     Q_PROPERTY(QColor inactive READ inactive NOTIFY themeChanged FINAL)
+    Q_PROPERTY(QColor splitter READ splitter NOTIFY themeChanged FINAL)
 
     Q_PROPERTY(int menuBarHeight READ menuBarHeight NOTIFY sizeChanged FINAL)
 
@@ -54,11 +57,14 @@ public:
     QColor highlighted() const;
     QColor text() const;
     QColor disabledText() const;
+    QColor highlightedText() const;
     QColor icon() const;
     QColor indicator() const;
     QColor panelIndicator() const;
+    QColor handleIndicator() const;
     QColor active() const;
     QColor inactive() const;
+    QColor splitter() const;
 
     int menuBarHeight() const { return 25; }
 Q_SIGNALS:

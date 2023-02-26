@@ -8,10 +8,13 @@ highlighted     = "#45475A"
 # Text related
 text            = "#cdd6f4"
 disabledText    = "#363659"
+highlightedText = "#30304b"
 
 # Element related
 icon            = "#6c7086"
 indicator       = "#ffcc66"
-panelIndicator  = "#CBA6F7"
+panelIndicator  = "#cba6f7"
+handleIndicator = "#89dceb"
 active          = "#1e1e2e"
 inactive        = "#6c7086"
+splitter        = "#313244"

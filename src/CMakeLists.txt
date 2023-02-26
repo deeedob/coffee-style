@@ -10,6 +10,12 @@ set(QML_FILES
     "qml/MenuItem.qml"
     "qml/Sidebar.qml"
     "qml/SidebarEntry.qml"
+    "qml/SplitView.qml"
+    "qml/Text.qml"
+    "qml/TextArea.qml"
+    "qml/ScrollView.qml"
+    "qml/ScrollBar.qml"
+    "qml/ScrollIndicator.qml"
     "qml/Icon.qml"
     "qml/CheckableButtonGroup.qml"
     "qml/WindowDragHandler.qml"
@@ -45,11 +51,12 @@ qt_add_qml_module(coffeestyle
     QML_FILES
         "${QML_FILES}"
     SOURCES
-    coffeestyle.cpp
-    coffeestyle.hpp
+        coffeestyle.cpp
+        coffeestyle.hpp
     RESOURCES
         schemes/catpuccin.toml
 )
+
 
 include(GenerateExportHeader)
 target_include_directories(coffeestyle PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
@@ -63,3 +70,5 @@ target_link_libraries(coffeestyle PRIVATE
     Qt::QuickControls2
     toml11::toml11
 )
+add_subdirectory(components)
+add_dependencies(coffeestyle coffeecontrols)

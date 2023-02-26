@@ -10,6 +10,7 @@ target_link_libraries(testBasic PRIVATE
     Qt6::Quick
     Qt6::QuickControls2
     coffeestyle
+    coffeecontrols
 )
 
 qt_add_qml_module(testBasic

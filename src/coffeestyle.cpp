@@ -24,12 +24,15 @@ CoffeeStyle::CoffeeStyle(QObject* parent)
     m_colorMap["area2"];
     m_colorMap["highlighted"];
     m_colorMap["text"];
+    m_colorMap["highlightedText"];
     m_colorMap["disabledText"];
     m_colorMap["icon"];
     m_colorMap["indicator"];
     m_colorMap["panelIndicator"];
+    m_colorMap["handleIndicator"];
     m_colorMap["active"];
     m_colorMap["inactive"];
+    m_colorMap["splitter"];
 
     if (initSchemes())
         loadColorScheme(m_availableSchemes[0].name);
@@ -134,27 +137,26 @@ QColor CoffeeStyle::background() const
 {
     return m_colorMap.at("background");
 }
-
 QColor CoffeeStyle::area1() const
 {
     return m_colorMap.at("area1");
 }
-
 QColor CoffeeStyle::area2() const
 {
     return m_colorMap.at("area2");
 }
-
 QColor CoffeeStyle::highlighted() const
 {
     return m_colorMap.at("highlighted");
 }
-
 QColor CoffeeStyle::text() const
 {
     return m_colorMap.at("text");
 }
-
+QColor CoffeeStyle::highlightedText() const
+{
+    return m_colorMap.at("highlightedText");
+}
 QColor CoffeeStyle::disabledText() const
 {
     return m_colorMap.at("disabledText");
@@ -171,6 +173,10 @@ QColor CoffeeStyle::panelIndicator() const
 {
     return m_colorMap.at("panelIndicator");
 }
+QColor CoffeeStyle::handleIndicator() const
+{
+    return m_colorMap.at("handleIndicator");
+}
 QColor CoffeeStyle::active() const
 {
     return m_colorMap.at("active");
@@ -179,6 +185,11 @@ QColor CoffeeStyle::inactive() const
 {
     return m_colorMap.at("inactive");
 }
+QColor CoffeeStyle::splitter() const
+{
+    return m_colorMap.at("splitter");
+}
+
 
 void CoffeeStyle::attachedParentChange(QQuickAttachedPropertyPropagator* newParent, QQuickAttachedPropertyPropagator* oldParent)
 {

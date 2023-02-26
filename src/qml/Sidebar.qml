@@ -9,16 +9,18 @@ Rectangle {
     required property ApplicationWindow rootWindow
     property list<SidebarEntry> topItems
     property list<SidebarEntry> bottomItems
+    property int spacing: 10
+    z: 1
 
     ColumnLayout {
         anchors.fill: control
-        spacing: 10
+        spacing: control.spacing
 
         CheckableButtonGroup {
             Layout.fillWidth: true
-            Layout.topMargin: 5
+            Layout.topMargin: control.spacing
             contentChildren: control.topItems
-            spacing: 5
+            spacing: control.spacing
         }
 
         // This item acts as a spacer to expand between the checkable and non-checkable buttons.
@@ -34,8 +36,9 @@ Rectangle {
 
         CheckableButtonGroup {
             Layout.fillWidth: true
-            Layout.bottomMargin: 5
+            Layout.bottomMargin: 10
             contentChildren: control.bottomItems
+            spacing: control.spacing
         }
     }
 }

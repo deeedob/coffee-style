@@ -5,14 +5,18 @@ import Coffee.Style
 
 Button {
     id: control
-    icon.width: parent.width / 1.75
-    icon.height: parent.width / 1.75
-    leftPadding: 8 + indicator.width
+    icon.width: parent.width / 1.5
+    icon.height: parent.width / 1.5
     icon.color: down || checked ? CoffeeStyle.indicator : CoffeeStyle.icon
-    bottomPadding: 0
-    bottomInset: 0
+
     topPadding: 0
     topInset: 0
+    rightPadding: 0
+    rightInset: 0
+    bottomPadding: 0
+    bottomInset: 0
+    leftPadding: 0
+    leftInset: 0
 
     checkable: true
     Layout.fillWidth: true
@@ -32,7 +36,6 @@ Button {
 
     Rectangle {
         id: indicator
-        x: 4
         width: 3
         height: control.icon.width - 2
         anchors.verticalCenter: parent.verticalCenter
